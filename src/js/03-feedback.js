@@ -26,11 +26,11 @@ function onFormInput(evt) {
 function savingValue() {
         const savedMessage = JSON.parse(localStorage.getItem(FORM_KEY));
     
-        if (savedMessage.message) {
+        if (savedMessage && savedMessage.message) {
             formInputText.value = savedMessage.message;
         };
         
-        if (savedMessage.email) {
+        if (savedMessage && savedMessage.email) {
             formInputMail.value = savedMessage.email;
         };
     };
